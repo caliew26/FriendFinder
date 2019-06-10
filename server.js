@@ -1,5 +1,5 @@
-const express = requires("express");
-const path = reuire("path");
+const express = require("express");
+const path = require("path");
 const bodyParser = require("body-parser");
 
 const app = express();
@@ -13,10 +13,10 @@ var PORT = process.env.PORT || 8080;
 
 
 //this is giving the absolute path to the apiRoutes & htmlRoutes files
-require(path.join(__dirname, './app/routing/apiRoutes.js'))(app);
-require(path.join(__dirname, './app;routing/htmlRoutes.js'))(app);
+require(path.join(__dirname, '/app/routing/apiRoutes.js'))(app);
+require(path.join(__dirname, '/app/routing/htmlRoutes.js'))(app);
 
 // Start our server
-server.listen(PORT, function() {
+app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });

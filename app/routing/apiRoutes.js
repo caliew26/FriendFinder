@@ -1,12 +1,14 @@
 //this is for what the datq the user sees and post to our server to store
 var path = require("path");
 
-app.get("/survey",function(req,res){
-    console.log("survey route");
-    res.sendFile(path.join(__dirname, "survey.html"));
-})
+module.exports = function(app){
+    app.get("/survey",function(req,res){
+        console.log("survey route");
+        res.sendFile(path.join(__dirname, "../public/survey.html"));
+    })
 
-app.post("/api/friends",function(req,res){
-    console.log("api/friends");
-// This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
-});
+    app.post("/api/friends",function(req,res){
+        console.log("api/friends");
+    // This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
+    });
+}
