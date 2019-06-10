@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Friend Finder</title>
         <link rel="stylesheet" href="../css/reset.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="../css/style.css">
     </head>
+
     <body>
-        <h1>See who your friend match is!</h1>
-        <button class="submit-begin">Begin Survey</button>
+
+        <div class="center-align #18ffff cyan accent-2 darken-3 heading">
+
+            <h1>FRIEND FINDER</h1>
+            <h5>Ever had that feeling, man it's hard to make new friends? Well, I have created a generator of sorts that will take all that guess work out of your world and show you who you should be friends with.</h5>
+            <h3>What are you waiting for?</h3>
+            <h4>Take a quick survey and I'll show you your new friend!</h4>
 
 
+            <button class="btn waves-effect.waves-smile  waves-light" type="submit" name="action"><a href="survey.html" >Take Survey<i class="material-icons right">send</i></a></button>
+        </div>
 
-        <script type="text/javascript">
-            $(document).ready(function(){
-                event.preventDefault();
 
-                $(".submit-begin").on("click",function(){
-                    console.log("you clicked the begin survey button");
-                    
-                })
-            });
+        <!-- <div class="divider"></div>
+            <div class="section">
+            <p><a href="#">API Table Link</a> | <a href="#">API Wait List</a></p>
+        </div> -->
+      </div>
 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     </body>
+
 </html>

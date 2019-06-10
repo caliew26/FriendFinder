@@ -1,0 +1,29 @@
+.header {
+    background-color: whitesmoke;
+    margin: 1%;
+    font-family: fantasy;
+    font-weight: bold;
+    color: black;
+    border: 2px solid black;
+    padding: 2.5%;
+}
+
+.main {
+    background: whitesmoke;
+    margin: 1%;
+    font-family: fantasy;
+    color: green;
+    border: 2px solid black;
+    padding: 2.5%;
+}
+
+#submit-survey {
+    margin: 1%;
+}
+
+.waves-effect.waves-smile {
+     background-color:#e0f2f1;
+     color: whitesmoke;
+   }
+
+
