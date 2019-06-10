@@ -1,3 +1,6 @@
+//this is for what the datq the user sees and post to our server to store
+var path = require("path");
+
 app.get("/survey",function(req,res){
     console.log("survey route");
     res.sendFile(path.join(__dirname, "survey.html"));
@@ -5,15 +8,5 @@ app.get("/survey",function(req,res){
 
 app.post("/api/friends",function(req,res){
     console.log("api/friends");
-    var newfriend = req.body;
-
-    // Using a RegEx Pattern to remove spaces from newCharacter
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newfriend.routeName = newfriend.name.replace(/\s+/g, "").toLowerCase();
-  
-    console.log(newfriend);
-  
-    friends.push(newfriend);
-  
-    res.json(newfriend);
+// This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 });
