@@ -6,21 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Friend Finder</title>
+        <!-- linked the reset.css -->
         <link rel="stylesheet" href="../css/reset.css">
+        <!-- linked the jQuery library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- linked the bootstrap cdn -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- linked the materialize font use -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- linked my style.css -->
         <link rel="stylesheet" href="../css/style.css">
     </head>
 
     <body>
-
-        <div class="header">
+        <div class="jumbotron header">
             <h1>Answer the following 10 questions and let me show you who your new friend is.</h1>
         </div>
 
-        <div class="main">
+        <div class="main" id="question-options">
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 1</h3>
+                    <h3><u>Question 1</u></h3>
                     <h4>You like to rollerskate.</h4>
                     <select id="question1">
                         <option value="" disabled selected>Choose your option</option>
@@ -35,7 +41,7 @@
 
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 2</h3>
+                    <h3><u>Question 2</u></h3>
                     <h4>When you go to bed you fall right asleep.</h4>
                     <select id="question2">
                         <option value="" disabled selected>Choose your option</option>
@@ -50,7 +56,7 @@
 
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 3</h3>
+                    <h3><u>Question 3</u></h3>
                     <h4>You are an early riser.</h4>
                     <select id="question3">
                         <option value="" disabled selected>Choose your option</option>
@@ -65,7 +71,7 @@
 
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 4</h3>
+                    <h3><u>Question 4</u></h3>
                     <h4>When you go out to eat, you always go to Mexican food.</h4>
                     <select id="question4">
                         <option value="" disabled selected>Choose your option</option>
@@ -80,7 +86,7 @@
 
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 5</h3>
+                    <h3><u>Question 5</u></h3>
                     <h4>You like EPCOT.</h4>
                     <select id="question5">
                         <option value="" disabled selected>Choose your option</option>
@@ -95,7 +101,7 @@
 
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 6</h3>
+                    <h3><u>Question 6</u></h3>
                     <h4>You like to vacation on the beach.</h4>
                     <select id="question6">
                         <option value="" disabled selected>Choose your option</option>
@@ -110,7 +116,7 @@
 
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 7</h3>
+                    <h3><u>Question 7</u></h3>
                     <h4>You enjoy "screetchy" music (i.e. Metallica).</h4>
                     <select id="question7">
                         <option value="" disabled selected>Choose your option</option>
@@ -125,7 +131,7 @@
 
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 8</h3>
+                    <h3><u>Question 8</u></h3>
                     <h4>You like dogs.</h4>
                     <select id="question8">
                         <option value="" disabled selected>Choose your option</option>
@@ -140,7 +146,7 @@
 
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 9</h3>
+                    <h3><u>Question 9</u></h3>
                     <h4>Marvel is better than DC.</h4>
                     <select id="question9">
                         <option value="" disabled selected>Choose your option</option>
@@ -155,7 +161,7 @@
 
             <div class="row">
                 <div class="input-field col-md-12">
-                    <h3>Question 10</h3>
+                    <h3><u>Question 10</u></h3>
                     <h4>Hot weather is better than cold.</h4>
                     <select id="question10">
                         <option value="" disabled selected>Choose your option</option>
@@ -167,8 +173,8 @@
                     </select>
                 </div>
             </div>
-
-            <button id="submit-survey">Submit</button>
+            <br>
+            <button id="submit-survey">Submit Your Answers</button>
         </div>
 
         <script type="text/javascript">
@@ -176,7 +182,7 @@
                 event.preventDefault();
 
                 //jquery for listen to onclick of submit button
-                $("#submit-survey").on("click",function(){
+                $("#submit-survey").click(function(){
                     console.log("You clicked submit")
                 
                     //capture user input about questions, going to use them to figure out a math equation
@@ -191,8 +197,21 @@
                         $("#question8").val().trim(),
                         $("#question9").val().trim(),
                         $("#question10").val().trim()
-                    ] 
-                })
+                    ];
+
+                    var friendInput = $("#question-options");
+
+                    for (let i = 0; i < userInput.length; i++){
+                        if(){
+                            alert("you are going to capture a friends picture url and put it here, like the image-div below")
+                            // $("#image-div").html("<img src='https://www.cscassets.com/recipes/wide_cknew/wide_25336.jpg' />");
+                        }
+                    }
+                }
+
+                // function replay(){
+                //     location.reload();
+                }
             });
         </script>
 

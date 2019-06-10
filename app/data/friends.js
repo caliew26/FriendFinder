@@ -1,5 +1,5 @@
 //creating a constructor(?) array that will hold all the friends data
-var friends = [
+var friendsGroup = [
     {
         name: "Kimberley",
         picture: "picture url to go here",
@@ -17,7 +17,7 @@ var friends = [
         ]
     },
     {
-        name: "Kim",
+        name: "Jill",
         picture: "picture url to go here",
         score: [
                 "3",
@@ -163,4 +163,4 @@ var friends = [
 ];
 
 //going to reference this on another page so I need to have the export
-module.exports = friendsArray;
+module.exports = friendsGroup;
