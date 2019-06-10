@@ -10,8 +10,8 @@ module.exports = function(app){
     })
 
     //this is the "survey" page - the user will be directed to the survey page when the /survey is called
-    app.get("/survey",function(req,res){
+    app.get("/survey.html",function(req,res){
         console.log("survey route");
-        res.sendFile(path.join(__dirname, "../pubic/survey"));
+        res.sendFile(path.join(__dirname, "../pubic/survey.html"));
     })
 }
