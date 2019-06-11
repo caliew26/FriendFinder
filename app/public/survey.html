@@ -5,17 +5,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Friend Finder</title>
+        <title>Friend Finder Survey</title>
         <!-- linked the reset.css -->
-        <link rel="stylesheet" href="../css/reset.css">
+        <!-- <link rel="stylesheet" href="../css/reset.css"> -->
         <!-- linked the jQuery library -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
         <!-- linked the bootstrap cdn -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- linked the materialize font use -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- linked my style.css -->
-        <link rel="stylesheet" href="../css/style.css">
+        <!-- <link rel="stylesheet" href="../css/style.css"> -->
     </head>
 
     <body>
@@ -23,12 +27,12 @@
             <h1>Answer the following 10 questions and let me show you who your new friend is.</h1>
         </div>
 
-        <div class="main" id="question-options">
+        <div class="main" id="questionResponses">
             <div class="row">
                 <div class="input-field col-md-12">
                     <h3><u>Question 1</u></h3>
                     <h4>You like to rollerskate.</h4>
-                    <select id="question1">
+                    <select id="ques1">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -43,7 +47,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 2</u></h3>
                     <h4>When you go to bed you fall right asleep.</h4>
-                    <select id="question2">
+                    <select id="ques2">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -58,7 +62,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 3</u></h3>
                     <h4>You are an early riser.</h4>
-                    <select id="question3">
+                    <select id="ques3">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -68,12 +72,12 @@
                     </select>
                 </div>
             </div>
-
+<!-- 
             <div class="row">
                 <div class="input-field col-md-12">
                     <h3><u>Question 4</u></h3>
                     <h4>When you go out to eat, you always go to Mexican food.</h4>
-                    <select id="question4">
+                    <select id="ques4">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -88,7 +92,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 5</u></h3>
                     <h4>You like EPCOT.</h4>
-                    <select id="question5">
+                    <select id="ques5">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -103,7 +107,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 6</u></h3>
                     <h4>You like to vacation on the beach.</h4>
-                    <select id="question6">
+                    <select id="ques6">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -118,7 +122,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 7</u></h3>
                     <h4>You enjoy "screetchy" music (i.e. Metallica).</h4>
-                    <select id="question7">
+                    <select id="ques7">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -133,7 +137,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 8</u></h3>
                     <h4>You like dogs.</h4>
-                    <select id="question8">
+                    <select id="ques8">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -148,7 +152,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 9</u></h3>
                     <h4>Marvel is better than DC.</h4>
-                    <select id="question9">
+                    <select id="ques9">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -163,7 +167,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 10</u></h3>
                     <h4>Hot weather is better than cold.</h4>
-                    <select id="question10">
+                    <select id="ques10">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -172,57 +176,62 @@
                         <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
             <br>
             <button id="submit-survey">Submit Your Answers</button>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p><a href="../data/friends.js">API Friends List</a></p>
+            </div>
+        </footer>
+
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Here's Your New Friend!</h4>
+                <p>A bunch of text</p>
+                <button data-target="modal1" class="btn modal-trigger">Close</button>
+            </div>
+            <div class="modal-footer">
+                <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Modal</a>
+                </div>
+            </div>
         </div>
 
         <script type="text/javascript">
             $(document).ready(function(){
-                event.preventDefault();
+                // event.preventDefault();
 
                 //jquery for listen to onclick of submit button
                 $("#submit-survey").click(function(){
                     console.log("You clicked submit")
-                
-                    //capture user input about questions, going to use them to figure out a math equation
-                    var userInput = [
-                        $("#question1").val().trim(),
-                        $("#question2").val().trim(),
-                        $("#question3").val().trim(),
-                        $("#question4").val().trim(),
-                        $("#question5").val().trim(),
-                        $("#question6").val().trim(),
-                        $("#question7").val().trim(),
-                        $("#question8").val().trim(),
-                        $("#question9").val().trim(),
-                        $("#question10").val().trim()
+
+                    var userQues = [
+                        $("#ques1").val().trim(), 
+                        $("#ques2").val().trim(), 
+                        $("#ques3").val().trim(), 
+                        // $("#ques4").val().trim(),
+                        // $("#ques5").val().trim(), 
+                        // $("#ques6").val().trim(),
+                        // $("#ques7").val().trim(),
+                        // $("#ques8").val().trim(),
+                        // $("#ques9").val().trim(),
+                        // $("#ques10").val().trim()
                     ];
+                    // var questions = [];
 
-                    var friendInput = $("#question-options");
+                    console.log(userQues);
+                
+                    //need to compare the userQues values to the friends.js "score" values and see which one of the friends.js friend would be chosen to popup
+                    // $('#modal1').modal('open');
 
-                    for (let i = 0; i < userInput.length; i++){
-                        // if(){
-                        //     alert("you are going to capture a friends picture url and put it here, like the image-div below")
-                            // $("#image-div").html("<img src='https://www.cscassets.com/recipes/wide_cknew/wide_25336.jpg' />");
-                        // }
-                        console.log("You will figure this forloop out")
-                    }
                 });
-
-// Determine the user's most compatible friend using the following as a guide:
-
-// Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
-// With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the totalDifference.
-// Example:
-// User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
-// User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
-// Total Difference: 2 + 1 + 2 = 5
-// Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both 5-3 and 3-5 as 2, and so on.
-// The closest match will be the user with the least amount of difference.
-
-                // function replay(){
-                //     location.reload();
+                //need the modal button to popopen the result
+                // $("#modal1").modal("open");
             });
         </script>
 

@@ -2,7 +2,7 @@
 var friendsGroup = [
     {
         name: "Kimberley",
-        picture: "picture url to go here",
+        picture: "https://images.unsplash.com/photo-1550691389-8d62871a20e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         score: [
                 "1",
                 "2",
@@ -18,7 +18,7 @@ var friendsGroup = [
     },
     {
         name: "Jill",
-        picture: "picture url to go here",
+        picture: "https://images.unsplash.com/photo-1447005497901-b3e9ee359928?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         score: [
                 "3",
                 "4",
@@ -34,7 +34,7 @@ var friendsGroup = [
     },
     {
         name: "Jennifer",
-        picture: "picture url to go here",
+        picture: "https://images.pexels.com/photos/1367270/pexels-photo-1367270.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
         score: [
                 "5",
                 "1",
@@ -50,7 +50,7 @@ var friendsGroup = [
     },
     {
         name: "Victoria",
-        picture: "picture url to go here",
+        picture: "https://images.pexels.com/photos/2401833/pexels-photo-2401833.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
         score: [
                 "5",
                 "5",
@@ -66,7 +66,7 @@ var friendsGroup = [
     },
     {
         name: "Arlynn",
-        picture: "picture url to go here",
+        picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBOZorJVRqxHln8r1wbNjIKT-lbqE2irT8vy4e4YvKUzLRi1oxgw",
         score: [
                 "1",
                 "2",
@@ -82,7 +82,7 @@ var friendsGroup = [
     },
     {
         name: "Delonna",
-        picture: "picture url to go here",
+        picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBPLZQBJXy6zB1tSE9l03eD4tCC4z87zrKJFmgOqzME0TK6yl1Qw",
         score: [
                 "1",
                 "2",
@@ -98,7 +98,7 @@ var friendsGroup = [
     },
     {
         name: "Stacy",
-        picture: "picture url to go here",
+        picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqxVWuTbU0q189TISsPI5FWz9T_O2LJmElIGnjCueUfnv826en",
         score: [
                 "2",
                 "2",
@@ -114,7 +114,7 @@ var friendsGroup = [
     },
     {
         name: "Sarah",
-        picture: "picture url to go here",
+        picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6-CguA-86CxltYdLDlnAzIjfhPbRLYU6a0YTQkf8BkA3Kna1tAg",
         score: [
                 "3",
                 "3",
@@ -130,7 +130,7 @@ var friendsGroup = [
     },
     {
         name: "Debbie",
-        picture: "picture url to go here",
+        picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW8O99_XNp77tpLo94C02RGM6gyPRAE5Vky-ktGj6lVeVDL7k5tw",
         score: [
                 "1",
                 "2",
@@ -146,7 +146,7 @@ var friendsGroup = [
     },
     {
         name: "Jacqueline",
-        picture: "picture url to go here",
+        picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsprNrBsilo7MM2NxTReFf6WpxA91jpmYR9GV6nd1GyUDwrHzn-g",
         score: [
                 "1",
                 "2",
