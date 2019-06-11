@@ -8,12 +8,6 @@
         <title>Friend Finder Survey</title>
         <!-- linked the reset.css -->
         <!-- <link rel="stylesheet" href="../css/reset.css"> -->
-        <!-- linked the jQuery library -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
         <!-- linked the bootstrap cdn -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- linked the materialize font use -->
@@ -26,7 +20,16 @@
         <div class="jumbotron header">
             <h1>Answer the following 10 questions and let me show you who your new friend is.</h1>
         </div>
+        <!-- info about user -->
+        <div>
+            <h3>What is your name?</h3>
+            <input type="text" id="fname" class="form-control" required>
+            <h3>Thanks</h3>
+            <input type="text" id="lname" class="form-control" required>
+            <hr>
+        </div>
 
+        <!-- questions for user -->
         <div class="main" id="questionResponses">
             <div class="row">
                 <div class="input-field col-md-12">
@@ -178,7 +181,7 @@
                 </div>
             </div> -->
             <br>
-            <button id="submit-survey">Submit Your Answers</button>
+            <button class="submit-survey">Submit Your Answers</button>
         </div>
         <footer class="footer">
             <div class="container">
@@ -186,34 +189,71 @@
             </div>
         </footer>
 
-        <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+          <!-- Modal -->
+        <div class="submit-survey" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Your Friend Match</h4>
+                    </div>
 
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Here's Your New Friend!</h4>
-                <p>A bunch of text</p>
-                <button data-target="modal1" class="btn modal-trigger">Close</button>
-            </div>
-            <div class="modal-footer">
-                <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Modal</a>
+                    <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    
+                    <div class="modal-footer">        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">Close
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                    </div>
                 </div>
             </div>
         </div>
+      
+        <!-- Modal -->
+        <!-- <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLabel">Your New Friend!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                    ...
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
 
         <script type="text/javascript">
             $(document).ready(function(){
-                // event.preventDefault();
 
                 //jquery for listen to onclick of submit button
-                $("#submit-survey").click(function(){
+                $(".submit-survey").click(function(){
+                    event.preventDefault();
                     console.log("You clicked submit")
 
-                    var userQues = [
-                        $("#ques1").val().trim(), 
-                        $("#ques2").val().trim(), 
-                        $("#ques3").val().trim(), 
+                    var userQues = {
+                        name: $("#fname").val(),
+                        image: $("#lname").val(),
+                        score: [
+                        $("#ques1").val(), 
+                        $("#ques2").val(), 
+                        $("#ques3").val(), 
                         // $("#ques4").val().trim(),
                         // $("#ques5").val().trim(), 
                         // $("#ques6").val().trim(),
@@ -221,17 +261,24 @@
                         // $("#ques8").val().trim(),
                         // $("#ques9").val().trim(),
                         // $("#ques10").val().trim()
-                    ];
+                        ]
+                    }
                     // var questions = [];
 
                     console.log(userQues);
+
+
                 
                     //need to compare the userQues values to the friends.js "score" values and see which one of the friends.js friend would be chosen to popup
                     // $('#modal1').modal('open');
 
+
                 });
                 //need the modal button to popopen the result
-                // $("#modal1").modal("open");
+                // $(".modal").modal("open");
+                $(".close").click(function(){
+
+                })
             });
         </script>
 

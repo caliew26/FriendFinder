@@ -24,7 +24,7 @@ module.exports = function(app){
 //above 3 lines would need to be a forloop??
 
         //the value that matches closest to each other is the new friend
-        //in the modal1
+        //in the modal
             //show the friend name
         var matchFriendName = friendsGroup.name;
             //show the friend picture
