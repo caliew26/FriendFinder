@@ -15,19 +15,24 @@ module.exports = function(app){
 
     app.get("/add", function(request,response){
         console.log("this is the body " + JSON.stringify(request.body));
-        
+
         var result = request.body["num1"]+request.body["num2"]
         response.send(result.toString());
     })
 
     app.post("/api/friends", function(req, res){
-        console.log("this is the post api/friends");
-        //this is where the calculation is going to happen
+        // console.log("this is the post api/friends");
         
         //get the userQues from the survey.html file
         var userQues = req.body;
         console.log("this is the req.body " + JSON.stringify(req.body));
+
+        //assign a variable for the userQues so i can make an array of the score
+        var questionsScore = [userQues.score];
+        console.log("this is questionsScore array " + questionsScore);
         //get the friendsGroup from the friends.js file
+        
+        // });
         //compare index to index between the 2 files
         //above 3 lines would need to be a forloop??
 

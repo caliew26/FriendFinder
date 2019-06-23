@@ -207,6 +207,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -222,9 +223,10 @@
                 $.ajax({
                     type: "POST",
                     url: "/api/friends",
-                    data: form.serialize()
-                    }).then (function(res, resp){
-                        resp.send(result)
+                    data: form.serialize(), // serializes the form's elements.
+                    success: function(data) {
+                        alert(data);
+                    }
                 });
             })
                 //declare a variable with all the form data in an object
@@ -233,14 +235,14 @@
                 score: [
                     $("#ques1").val(),
                     $("#ques2").val(),
-                    $("#ques3").val(),
-                    $("#ques4").val(),
-                    $("#ques5").val(),
-                    $("#ques6").val(),
-                    $("#ques7").val(),
-                    $("#ques8").val(),
-                    $("#ques9").val(),
-                    $("#ques10").val()
+                    $("#ques3").val()
+                    // $("#ques4").val(),
+                    // $("#ques5").val(),
+                    // $("#ques6").val(),
+                    // $("#ques7").val(),
+                    // $("#ques8").val(),
+                    // $("#ques9").val(),
+                    // $("#ques10").val()
                 ]
             }
 
