@@ -1,27 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder Survey</title>
-    <!-- linked the reset.css -->
-    <!-- <link rel="stylesheet" href="../css/reset.css"> -->
-    <!-- linked the bootstrap cdn -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- linked the materialize font use -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- linked my style.css -->
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <div class="jumbotron header">
         <h1>Answer the following 10 questions and let me show you who your new friend is.</h1>
     </div>
-    <!-- info about user -->
 
     <!-- questions for user -->
     <div class="main" id="questionResponses">
@@ -29,9 +21,6 @@
             <div class="row">
                 <h3>What is your first name?</h3>
                 <input type="text" name="fname" class="form-control" required>
-                <h3>What is your last name?</h3>
-                <input type="text" name="lname" class="form-control" required>
-                <hr>
             </div>
 
             <div class="row">
@@ -189,7 +178,7 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <p><a href="/data">API Friends List</a></p>
+            <p><a href="/data">API Friends List</a> || <a href="/">Home</a></p>
         </div>
     </footer>
 
@@ -233,33 +222,37 @@
                 $.ajax({
                     type: "POST",
                     url: "/api/friends",
-                    data: form.serialize(), // serializes the form's elements.
-                    success: function(data) {
-                        alert(data);
-                    }
+                    data: form.serialize()
+                    }).then (function(res, resp){
+                        resp.send(result)
                 });
-                //declare a variable with all the form data
-                var userQues = {
-                    fname: $("#fname").val(),
-                    lname: $("#lname").val(),
-                    score: [
-                        $("#ques1").val(),
-                        $("#ques2").val(),
-                        $("#ques3").val(),
-                        $("#ques4").val(),
-                        $("#ques5").val(),
-                        $("#ques6").val(),
-                        $("#ques7").val(),
-                        $("#ques8").val(),
-                        $("#ques9").val(),
-                        $("#ques10").val()
-                    ]
-                }
+            })
+                //declare a variable with all the form data in an object
+            var userQues = {
+                fname: $("#fname").val(),
+                score: [
+                    $("#ques1").val(),
+                    $("#ques2").val(),
+                    $("#ques3").val(),
+                    $("#ques4").val(),
+                    $("#ques5").val(),
+                    $("#ques6").val(),
+                    $("#ques7").val(),
+                    $("#ques8").val(),
+                    $("#ques9").val(),
+                    $("#ques10").val()
+                ]
+            }
 
+            // var questionsArray = {
+            //     userQues.score: []
+            // };
+
+            // for (let i = 0; i < userQues.length; i++){
+            //     var currentQuest = userQues[i];
+            //     if 
+            // }
                 //need to compare the userQues values to the friends.js "score" values and see which one of the friends.js friend would be chosen to popup
-
-
-            });
         });
     </script>
 

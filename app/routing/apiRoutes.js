@@ -15,6 +15,7 @@ module.exports = function(app){
 
     app.get("/add", function(request,response){
         console.log("this is the body " + JSON.stringify(request.body));
+        
         var result = request.body["num1"]+request.body["num2"]
         response.send(result.toString());
     })
