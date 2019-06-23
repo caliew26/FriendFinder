@@ -10,6 +10,10 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname + "/css")));
+
+app.use(express.static("./"));
+
 
 //this is giving the absolute path to the apiRoutes & htmlRoutes files
 require(path.join(__dirname, '/app/routing/apiRoutes.js'))(app);

@@ -2,6 +2,7 @@
 
 var path = require ("path");
 
+
 module.exports = function(app){
     //this is the "home" page - the user will be directed here when / is called
     app.get("/", function(req,res){
@@ -19,6 +20,11 @@ module.exports = function(app){
         // console.log(res + " this is res");
         // console.log(req + "this is req");
         res.sendFile(path.join(__dirname, "../data/friends.json"))
+        // res.send("You got this!")
+    })
+
+    app.get("/css/style.css", function(req,res){
+        res.sendFile(path.join(__dirname, "../public/css/style.css"))
         // res.send("You got this!")
     })
 }

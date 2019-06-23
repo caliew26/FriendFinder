@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder Survey</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
@@ -20,14 +31,14 @@
         <form id="formSubmit">
             <div class="row">
                 <h3>What is your first name?</h3>
-                <input type="text" name="fname" class="form-control" required>
+                <input type="text" id="fname" class="form-control" required>
             </div>
 
             <div class="row">
                 <div class="input-field col-md-12">
                     <h3><u>Question 1</u></h3>
                     <h4>You like to rollerskate.</h4>
-                    <select name="ques1">
+                    <select id="ques1">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -42,7 +53,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 2</u></h3>
                     <h4>When you go to bed you fall right asleep.</h4>
-                    <select name="ques2">
+                    <select id="ques2">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -57,7 +68,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 3</u></h3>
                     <h4>You are an early riser.</h4>
-                    <select name="ques3">
+                    <select id="ques3">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -67,12 +78,12 @@
                     </select>
                 </div>
             </div>
-            <!-- 
+            
             <div class="row">
                 <div class="input-field col-md-12">
                     <h3><u>Question 4</u></h3>
                     <h4>When you go out to eat, you always go to Mexican food.</h4>
-                    <select name="ques4">
+                    <select id="ques4">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -87,7 +98,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 5</u></h3>
                     <h4>You like EPCOT.</h4>
-                    <select name="ques5">
+                    <select id="ques5">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -102,7 +113,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 6</u></h3>
                     <h4>You like to vacation on the beach.</h4>
-                    <select name="ques6">
+                    <select id="ques6">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -117,7 +128,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 7</u></h3>
                     <h4>You enjoy "screetchy" music (i.e. Metallica).</h4>
-                    <select name="ques7">
+                    <select id="ques7">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -132,7 +143,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 8</u></h3>
                     <h4>You like dogs.</h4>
-                    <select name="ques8">
+                    <select id="ques8">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -147,7 +158,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 9</u></h3>
                     <h4>Marvel is better than DC.</h4>
-                    <select name="ques9">
+                    <select id="ques9">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -162,7 +173,7 @@
                 <div class="input-field col-md-12">
                     <h3><u>Question 10</u></h3>
                     <h4>Hot weather is better than cold.</h4>
-                    <select name="ques10">
+                    <select id="ques10">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -171,7 +182,7 @@
                         <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-            </div> -->
+            </div>
             <br>
             <button id="submit-survey" name="submit-survey" type="submit">Submit Your Answers</button>
         </form>
@@ -182,79 +193,70 @@
         </div>
     </footer>
 
-    <!-- Modal -->
-    <div class="submit-survey" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div id="modal-content">
+    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Your Friend Match</h4>
-                </div>
-
-                <div class="modal-body">
-                    <p>Some text in the modal.</p>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">Close
+                    <h5 class="modal-title" id="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#formSubmit").submit(function(e){
+            $('#myModal').modal('hide');
+            $("#formSubmit").submit(function (e) {
                 // avoid to execute the actual submit of the form.
-                e.preventDefault(); 
+                e.preventDefault();
                 // alert("The submit was clicked");
                 //declare a form to be "this" form
                 var form = $(this);
+                var userQues = {
+                    fname: $("#fname").val(),
+                    score: [
+                        $("#ques1").val(),
+                        $("#ques2").val(),
+                        $("#ques3").val(),
+                        $("#ques4").val(),
+                        $("#ques5").val(),
+                        $("#ques6").val(),
+                        $("#ques7").val(),
+                        $("#ques8").val(),
+                        $("#ques9").val(),
+                        $("#ques10").val()
+                    ]
+                };
+
                 //console.log the form in a string
-                console.log($("#formSubmit").serialize());
+                // console.log(form.serialize());
                 //make a jquery ajax post with url specific and submit the form in a string and then wait for a response ('data')
                 $.ajax({
                     type: "POST",
                     url: "/api/friends",
-                    data: form.serialize(), // serializes the form's elements.
-                    success: function(data) {
-                        alert(data);
+                    data: userQues, // serializes the form's elements.
+                    success: function (data) {
+                        // alert(data);
+                        $("#modal-title").html("<h3>" + data.name + "</h3>");
+                        $("#modal-body").html("<img src='" + data.picture +  
+                        "' alt='friend photo' width='100%'>");
+                        $('#myModal').modal('show');
                     }
                 });
             })
-                //declare a variable with all the form data in an object
-            var userQues = {
-                fname: $("#fname").val(),
-                score: [
-                    $("#ques1").val(),
-                    $("#ques2").val(),
-                    $("#ques3").val()
-                    // $("#ques4").val(),
-                    // $("#ques5").val(),
-                    // $("#ques6").val(),
-                    // $("#ques7").val(),
-                    // $("#ques8").val(),
-                    // $("#ques9").val(),
-                    // $("#ques10").val()
-                ]
-            }
 
-            // var questionsArray = {
-            //     userQues.score: []
-            // };
-
-            // for (let i = 0; i < userQues.length; i++){
-            //     var currentQuest = userQues[i];
-            //     if 
-            // }
-                //need to compare the userQues values to the friends.js "score" values and see which one of the friends.js friend would be chosen to popup
         });
     </script>
 

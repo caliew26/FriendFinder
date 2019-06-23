@@ -13,9 +13,10 @@
     padding: 2.5%;
 }
 
-.waves-effect.waves-smile {
+.takeSurvey {
      background-color:#e0f2f1;
-     color: whitesmoke;
+     color: black;
+     border: 1px solid grey;
    }
 
 body {
