@@ -248,7 +248,7 @@
                     url: "/api/friends",
                     data: userQues, // serializes the form's elements.
                     success: function (data) {
-                        // alert(data);
+                        alert(data);
                         $("#modal-title").html("<h3>" + data.name + "</h3>");
                         $("#modal-body").html("<img src='" + data.picture +  
                         "' alt='friend photo' width='100%'>");
