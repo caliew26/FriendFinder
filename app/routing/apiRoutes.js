@@ -80,28 +80,24 @@ module.exports = function(app){
         console.log("this is the questions.score " + questionScore);
 
         //get the friendsGroup from the friends.js file
-        request.get('http://localhost:8080/data', function (error, response, body) {
-            if (error) throw error;
-            json = JSON.parse(body);
-            // console.log(body);
-            var bestFriendSoFar;
-            var lowestScore = 100000000000;
-            //=> means "function"
-            json.forEach(possibleFriend => {
-                console.log(possibleFriend["name"]);
-                var totalScore = 0;
-                for(let i = 0; i < possibleFriend["score"].length; i++){
-                   totalScore += Math.abs(possibleFriend["score"][i] - questionScore[i]);
-                }
-                console.log(totalScore);
-                if (totalScore < lowestScore){
-                    bestFriendSoFar = possibleFriend;
-                    lowestScore = totalScore;
-                    console.log('Your New Possible Friend is ' + bestFriendSoFar["name"]);
-                }
-            });
-            // console.log(body);
-            res.send(bestFriendSoFar);
+
+        var bestFriendSoFar;
+        var lowestScore = 100000000000;
+        //=> means "function"
+        friendsData.forEach(possibleFriend => {
+            console.log(possibleFriend["name"]);
+            var totalScore = 0;
+            for(let i = 0; i < possibleFriend["score"].length; i++){
+                totalScore += Math.abs(possibleFriend["score"][i] - questionScore[i]);
+            }
+            console.log(totalScore);
+            if (totalScore < lowestScore){
+                bestFriendSoFar = possibleFriend;
+                lowestScore = totalScore;
+                console.log('Your New Possible Friend is ' + bestFriendSoFar["name"]);
+            }
+        });
+        // console.log(body);
+        res.send(bestFriendSoFar);
           });
-    })
 }
