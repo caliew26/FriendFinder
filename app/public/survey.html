@@ -203,8 +203,7 @@
                     </button>
                 </div>
                 <div class="modal-body" id="modal-body">
-                    
-                    <p>Modal body text goes here.</p>
+                    <img id="image-tag" alt="friend photo" width="100%">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -249,15 +248,14 @@
                     data: userQues, // serializes the form's elements.
                     success: function(data) {
                         // alert(data);
-                        var friendMatch = {
-                            text: "You matched with " + data.name,
-                            img: "<img src=\"" + data.picture + "\">"
-                        };
                         console.log(data);
-                        $("#modal-title").html("<h3>" + data.name + "</h3>");
-                        $("#modal-body").html("<img src='" + data.picture +  
-                        "' alt='friend photo' width='100%'>");
+                        $("#modal-title").html(data.name);
+                        // $("#modal-body").html("<img src='" + data.picture +  
+                        // "' alt='friend photo' width='100%'>");
+                        $("#image-tag").attr("src", data.picture);
                         $('#myModal').modal('show');
+                        //"src" is a string literal
+                        //data.picture (even though its an object) is a string
                     }
                 });
             })
